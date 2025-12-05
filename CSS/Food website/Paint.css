@@ -1,0 +1,101 @@
+*{
+    padding:0;
+    margin:0;
+}
+body{
+    background-color: black;
+    color:white;
+}
+nav{
+    background-color: black;
+    color:white;
+}
+ul,li
+{
+    display:inline;
+}
+h1{
+    padding:15px;
+}
+h1:hover{
+    color:red;
+    cursor:pointer;
+}
+li:hover{
+    color:blue;
+    cursor:pointer;
+}
+.box{
+    display:inline-block;
+    width:290px;
+    margin-left:10%;
+    text-align: center;
+    border-width:5px;
+    border-style:solid;
+    border-color:black;
+    background-color: white;
+    padding:14px;
+}
+.products{
+    text-align:center;
+    background-color: white;
+    margin-left:5%;
+    margin-top:5%;
+    padding:5px;
+}
+a{
+    color:white;
+    text-align:center;
+    padding:10px;
+    text-decoration:none;
+
+}
+h3{
+    display:inline-block;
+    background-color:white;
+    color:black;
+}
+.one{
+    background-color: black;
+    color:white;
+    text-align:center;
+    width:80px;
+    padding:5px;
+    margin-left:33%;
+}
+.two{
+    background-color: black;
+    color:white;
+    text-align:center;
+    width:80px;
+    padding:5px;
+    margin-left:35%;
+}
+.three{
+    background-color: black;
+    color:white;
+    text-align:center;
+    width:80px;
+    padding:5px;
+    margin-left:35%;
+}
+.one:hover,.two:hover,.three:hover{
+    background-color:red;
+    cursor:pointer;
+}
+.contact
+{
+    text-align:center;
+    padding:10px;
+    margin-top:20px;
+}
+.contact input{
+    padding:10px;
+    width:200px;
+    border-radius:5px;
+    border:none;
+    .contact button:hover{
+        background-color: red;
+        cursor:pointer;
+    }
+}
