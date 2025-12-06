@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>  
+    <div id="box"></div>
+    <button onclick="change()">Change Colour</button>
+    <style>
+        div{
+            background-color: black;
+            width: 100px;
+            height: 100px;
+            transition:2s
+        }
+        .widthmax{
+            width:900px;
+        }
+    </style>
+    <script>
+        var a = document.getElementById("box")
+        function change()
+        {
+            a.setAttribute("class","widthmax")
+        }
+    </script>
+</body>
+</html>
