@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <h1>STUDENT MANAGEMENT SYSTEM</h1>
+    <form id="formid">
+        <table>
+            <tr>
+                <td>
+                    <label for="studentname">Name:</label>
+                </td>
+                <td>
+                    <input type="text" id="studentname" placeholder="enter your name">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="deptname">Department:</label>
+                </td>
+                <td>
+                    <input type="text" id="deptname" placeholder="enter your department">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="rollnoid">Roll No:</label>
+                </td>
+                <td>
+                    <input type="text" id="rollnoid" placeholder="enter your roll no">
+                </td>
+            </tr>
+            <tr>
+                <td><label>Gender:</label></td>
+                <td>
+                    <input type="radio" id="one" name="gender" value="Male">
+                    <label for="one">Male</label>
+                    <input type="radio" id="two" name="gender" value="Female">
+                    <label for="two">Female</label>
+                    <input type="radio" id="three" name="gender" value="Other">
+                    <label for="three">Other</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="button" onclick="addStudentDetails()">Add Student Details</button>
+                </td>
+                <td>
+                    <button type="button" onclick="displayStudentDetails()">Display</button>
+                    <button type="button" onclick="updateStudentDetails()">Update</button>
+                </td>
+            </tr>
+
+        </table>
+    </form>
+    <div id="z"></div>
+</body>
+
+</html>
