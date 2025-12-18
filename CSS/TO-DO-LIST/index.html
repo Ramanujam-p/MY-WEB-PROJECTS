@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        body {
+            text-align: center;
+        }
+    </style>
+    <h2>Student Management System</h2>
+    <script>
+        let student = [];
+        function addstudent(name, roll, dept, marks) {
+            let a = {
+                name: name, roll: roll, dept: dept, marks: marks
+            };
+            student.push(a);
+        }
+        function display() {
+            document.write("<h3>Students list</h3>");
+            for (let b of student) {
+                document.write("Name:" + b.name + "<br>" + "Roll No:" + b.roll + "<br>" + "Department:" + b.dept + "<br>" + "Marks:" + b.marks + "<br>");
+            }
+        }
+        function search(name) {
+            let c = false;
+            for (let r of student) {
+                if (r.name.toLowerCase() === name.toLowerCase()) {
+                    document.write("Document found")
+                    document.write("Name:" + r.name + "<br>" + "Roll No:" + r.roll + "<br>" + "Department:" + r.dept + "<br>" + "Marks:" + r.marks + "<br>");
+                    c = true;
+                    break;
+                }
+
+            }
+            if (!c)
+                document.write("<h3>Student Not Found</h3>")
+        }
+        function avg() {
+            let t = 0;
+            for (let z of student) {
+                t += z.marks;
+            }
+            let y = t / student.length;
+            document.write("<h3>Average marks of the student:" + y + "</h3>");
+        }
+        addstudent("Rama", 25, "cse", 78);
+        addstudent("Ram", 34, "cse", 90);
+        addstudent("anu", 45, "cse", 79);
+        display();
+        search("anu");
+        avg();
+    </script>
+</body>
+
+</html>

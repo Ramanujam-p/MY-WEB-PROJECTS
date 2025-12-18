@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        body {
+            text-align: center;
+        }
+    </style>
+    <script>
+        function change() {
+            var a = "Rama"
+            document.getElementById("ab").innerHTML = a
+        }
+        function change1() {
+            var b = "Harish"
+            document.getElementById("ab").innerHTML = b
+        }
+        function change2() {
+            var c = "Ramanujam"
+            document.getElementById("ab").innerHTML = c
+        }
+        function previous_state() {
+            var d = "Name"
+            document.getElementById("ab").innerHTML = d
+        }
+    </script>
+    <h1 id="ab">Name</h1>
+    <button onclick="change()">Rama</button>
+    <button onclick="change1()">Harish</button>
+    <button onclick="change2()">Ramanujam</button><br>
+    <br>
+    <button onclick="previous_state()">Reset</button>
+</body>
+
+</html>
