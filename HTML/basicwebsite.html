@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<head>
+    <title>First website</title>
+    <meta charset=UTF-8>
+</head>
+
+<body>
+    <style>
+        .one {
+            text-align: center;
+
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: blue;
+        }
+
+        table,
+        tr,
+        th,
+        td {
+            border: 2px solid red;
+            margin: auto;
+        }
+
+        h1 {
+            display: inline;
+        }
+
+        button:hover {
+            background-color: green;
+        }
+
+        h1:hover {
+            color: blue;
+            background-color: white;
+            display: inline;
+            transition: 5s;
+            cursor: pointer;
+        }
+
+        body {
+            background-color: black;
+            color: white;
+        }
+    </style>
+    <div class="one">
+        <h1>Harvard University</h1>
+        <img src="logo.jpg" alt="image" width="30px" height="30px">
+        <br>
+        <form action="/submit" method="post">
+            <label for="name">Name:</label>
+            <input id="name" type="text" name="name" placeholder="Enter your name" required><br><br>
+            <label for="age">Age:</label>
+            <input id="age" type="number" name="age" placeholder="Enter your age" required><br><br>
+            <p>Choose your Gender:</p>
+            <label><input type="radio" name="gender" value="male" required> Male</label>
+            <label><input type="radio" name="gender" value="female"> Female</label><br><br>
+            <button type="submit" name="action" value="login" onclick="alertFunction('Login')">Login</button>
+            <button type="submit" name="action" value="signup" onclick="alertFunction('Sign up')">Sign Up</button>
+        </form>
+        <br>
+        <a href="https://www.harvard.edu/">Visit the Website</a><br>
+        <br>
+        <marquee width="300px" direction="right" height="300px" background-color:white>
+            <img src="harvard.jpg" alt="image" width="300px" height="300px">
+        </marquee>
+        <table>
+            <tr>
+                <th>Courses Offered</th>
+                <th>Class Start Time</th>
+                <th>Pass Percentage</th>
+                <th>Fees</th>
+                <th>Class End Time</th>
+            </tr>
+            <tr>
+                <td>Law</td>
+                <td>9.00</td>
+                <td>99%</td>
+                <td>1k dollars</td>
+                <td>5.00</td>
+            </tr>
+            <tr>
+                <td>Medicine</td>
+                <td>8.00</td>
+                <td>98%</td>
+                <td>10k dollars</td>
+                <td>6.00</td>
+            </tr>
+        </table>
+        <marquee width="60%" direction="right" height="100px">
+            click the link to visit the official website of Harvard university
+        </marquee>
+    </div>
+    <script>
+        function alertFunction(name) {
+            alert(name+" successful");
+        }
+    </script>
+</body>
+
+</html>
