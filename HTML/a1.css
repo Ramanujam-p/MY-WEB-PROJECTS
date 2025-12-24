@@ -1,0 +1,38 @@
+body{
+    background-color: black;
+    min-height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+button{
+    padding:1em 2em;
+    background-color: black;
+    border:none;
+    color:gray;
+    border-radius:1000px;
+    font-family:'seoge UI',Tahoma,Geneva,Verdana,sans-serif;
+    position: relative;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+button::after{
+    content:'';
+    position:absolute;
+    height:104%;
+    width:102%;
+    border-radius: 1000px;
+    z-index: -1;
+    background-image: linear-gradient(to bottom right, #ff00cc, #3333ff);
+}
+
+
+button:hover{
+    color:white;
+    background-color:  #ff00cc, #3333ff;
+    transition: 1s ease-in-out all;
+}
