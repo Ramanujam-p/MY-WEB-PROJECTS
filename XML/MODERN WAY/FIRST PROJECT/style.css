@@ -1,0 +1,41 @@
+body{
+    background-color: cyan;
+}
+h1{
+    text-align:center;
+    color:black;
+}
+h1:hover{
+    color:orangered;
+    transition: 1s;
+}
+#one{
+     
+     margin-left:47%;
+     width:100px;
+     height:40px;
+     border-radius:9px;
+     background-color: blue;
+     color:white;
+}
+#one:hover{
+    background-color: black;
+    color:whitesmoke;
+}
+#one:active{
+    opacity:0.7;
+}
+#output{
+    margin-left:37%;
+    margin-top:15px;
+}
+table {
+  width: 400px;         
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 15px 20px;    
+  font-size: 18px;       
+  text-align: center;
+}

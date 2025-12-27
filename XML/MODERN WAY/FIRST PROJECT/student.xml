@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list>
+    <student>
+        <name>Rama</name>
+        <dept>CT</dept>
+        <marks>45</marks>
+    </student>
+    <student>
+        <name>Harish</name>
+        <dept>ECE</dept>
+        <marks>46</marks>
+    </student>
+    <student>
+        <name>Ram</name>
+        <dept>PT</dept>
+        <marks>67</marks>
+    </student>
+</list>
