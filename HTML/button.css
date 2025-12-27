@@ -1,0 +1,49 @@
+.one{
+    background-color: oklch(59.541% 0.24244 29.048);
+    color:rgba(255, 255, 255, 0.946);
+    padding:10px;
+    font-family: 'Arial', sans-serif;
+    height: 36px;
+    border:none;
+    cursor:pointer;
+    transition: opacity 0.15s;
+}
+.two{
+    background-color: white;
+    border-color:rgb(41, 118, 211);;
+    color:rgb(41, 118, 211);
+    border-style:solid;
+    padding:10px;
+    margin-left:8px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    transition: background-color 2s,color 1s;
+}
+.three{
+    background-color: blue;
+    color:white;
+    border-radius: 15px;
+    padding:8px;
+    font-family: 'Arial', sans-serif;
+    margin-left:8px;
+    width:70px;
+}
+.one:hover{
+   opacity:0.8;/*fade out the element*/
+}
+.one:active{
+    opacity:0.5;
+}
+.two:hover{
+    background-color: blue;
+    color:white;
+}
+.two:active{
+    opacity:0.5;
+}
+.three:hover{
+    background-color: black;
+}
+.three:active{
+    opacity:0.5;
+}

@@ -1,0 +1,38 @@
+#one{
+    color:green;
+    cursor: pointer;
+}
+#two{
+     color:black;
+     font-family: 'Times New Roman', Times, serif;
+     font-size: large;
+     font-weight: bold;
+     cursor: pointer;
+}
+#three{
+    color:green;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+    font-weight: bold;
+    cursor: pointer;   
+}
+#a{
+    color:black;
+    font-size:large;
+    cursor: pointer;
+}
+#b{
+    background-color: yellow;
+    width:120px;
+    border-radius: 10px;
+    padding: 4px;
+    cursor: pointer;
+}
+#c{
+    background-color: orange;
+    width:100px;
+    border-radius: 10px;
+    margin-left:10px;
+    padding: 4px;
+    cursor: pointer;
+}
