@@ -1,0 +1,52 @@
+body{
+    background-color: white;
+    color:black;
+}
+h1{
+    text-align:center;
+}
+h1:hover{
+    cursor: pointer;
+    color:blue;
+    transition:1.5s;
+}
+#one
+{
+    margin-left:45%;
+    background-color: cyan;
+    color:black;
+    width:120px;
+    height:40px;
+    border-radius:25px;
+    border:none;
+}
+#one:hover{
+    background-color: blue;
+    color:white;
+}
+#one:active{
+    opacity:1;
+    background-color: green;
+}
+#output{
+    width:1500px;
+}
+table{
+    margin-top:50px;
+    margin-left:33%;
+    border:5px;
+    width:500px;
+   text-align: center;
+   font-size:20px;
+}
+th,tr{
+    border-collapse: collapse;
+    padding:15px 15px;
+    text-align: center;
+}
+.Book{
+ color:black;
+}
+.Unavailable{
+    color:red;
+}

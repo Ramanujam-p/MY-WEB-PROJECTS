@@ -1,0 +1,17 @@
+<bank>
+    <user>
+        <name>Rama</name>
+        <deposit>200</deposit>
+        <id>1</id>
+    </user>
+    <user>
+        <name>Ram</name>
+        <deposit>1000</deposit>
+        <id>2</id>
+    </user>
+    <user>
+        <name>Anu</name>
+        <deposit>300</deposit>
+        <id>3</id>
+    </user>
+</bank>
