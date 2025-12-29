@@ -1,52 +1,69 @@
-body{
-    background-color: white;
-    color:black;
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("image.png") no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;
 }
-h1{
-    text-align:center;
-}
-h1:hover{
-    cursor: pointer;
-    color:blue;
-    transition:1.5s;
-}
-#one
-{
-    margin-left:45%;
-    background-color: cyan;
-    color:black;
-    width:120px;
-    height:40px;
-    border-radius:25px;
-    border:none;
-}
-#one:hover{
-    background-color: blue;
-    color:white;
-}
-#one:active{
-    opacity:1;
-    background-color: green;
-}
-#output{
-    width:1500px;
-}
-table{
-    margin-top:50px;
-    margin-left:33%;
-    border:5px;
-    width:500px;
-   text-align: center;
-   font-size:20px;
-}
-th,tr{
-    border-collapse: collapse;
-    padding:15px 15px;
+
+h1 {
     text-align: center;
+    color: #ff4444;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 5px black;
+    margin-top: 20px;
 }
-.Book{
- color:black;
+
+h1:hover {
+    color: chartreuse;
+    transform: scale(1.1);
+    transition: all 2s ease-in-out;
+    text-shadow: black;
 }
-.Unavailable{
-    color:red;
+
+#one {
+    display: block;
+    margin: 20px auto;
+    width: 220px;
+    height: 45px;
+    border-radius: 25px;
+    background: linear-gradient(90deg, black, red);
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+}
+
+#one:hover {
+    background: linear-gradient(90deg, cyan, blue);
+    color: black;
+    transform: translateY(-3px);
+}
+
+#one:active {
+    transform: scale(0.95);
+    opacity: 0.8;
+}
+
+#output {
+    margin-left: 32%;
+    margin-top: 35px;
+}
+
+table {
+    width: 500px;
+    height: 200px;
+    border-color: yellowgreen;
+}
+
+th {
+    background-color: cyan;
+}
+
+th,
+tr,
+td {
+    padding: 15px;
 }
