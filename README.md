@@ -4,11 +4,6 @@ A simple and interactive web application built using **HTML, CSS, and JavaScript
 
 ---
 
-## 📸 Preview
-(Add a screenshot or GIF of your project here)
-
----
-
 ## 🚀 Features
 - 📂 Load data dynamically from JSON
 - 🧩 Clean and modular code structure
@@ -23,7 +18,4 @@ A simple and interactive web application built using **HTML, CSS, and JavaScript
 - **CSS3** – Styling and layout  
 - **JavaScript (ES6)** – Logic and interactivity  
 - **JSON** – Data storage and transfer  
-
----
-
-## 📁 Project Structure
+- **XML** - Data interchange
