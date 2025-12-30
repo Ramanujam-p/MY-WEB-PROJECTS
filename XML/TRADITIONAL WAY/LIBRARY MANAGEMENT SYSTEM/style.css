@@ -2,7 +2,7 @@ body {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
         url("image.png") no-repeat center center fixed;
     background-size: cover;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Seoge UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #fff;
 }
 
