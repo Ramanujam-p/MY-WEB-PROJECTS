@@ -1,0 +1,32 @@
+{
+    "books":[
+        {
+            "id":1,
+            "title":"Nature",
+            "author":"Rama",
+            "genre":"Fiction",
+            "status":"available"
+        },
+        {
+            "id":2,
+            "title":"World Without Humanity",
+            "author":"Ram",
+            "genre":"Real Story",
+            "status":"available"
+        },
+        {
+            "id":3,
+            "title":"Love",
+            "author":"Joshikha",
+            "genre":"Romantic",
+            "status":"available"
+        },
+        {
+            "id":4,
+            "title":"DSA",
+            "author":"Harish",
+            "genre":"Programming",
+            "status":" Not available"
+        }
+    ]
+}

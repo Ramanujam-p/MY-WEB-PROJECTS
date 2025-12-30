@@ -1,0 +1,49 @@
+body{
+    background-color: white;
+    color:black;
+}
+h1{
+    text-align: center;
+    color:black;
+}
+h1:hover{
+    color:blue;
+    transition: 1s ease-in-out;
+}
+#buttonid{
+    margin-left:46%;
+    margin-top:20px;
+    background-image: linear-gradient(90deg,blue,cyan);
+    color:white;
+    padding:10px;
+    border-radius:35px;
+}
+#buttonid:hover{
+    background-image: linear-gradient(90deg,purple,pink);
+}
+#buttonid:active{
+    background-image: linear-gradient(90deg,green,greenyellow);
+}
+table,th,td{
+    border:2px solid black;
+    border-collapse: collapse;
+    padding:10px;
+    text-align: center;
+    margin-left: 30%;
+    margin-top:40px;
+}
+th{
+    background-color: black;
+    color:white;
+}
+tr:nth-child(even){
+    background-color: lightgray;
+}
+tr:nth-child(odd){
+    background-color: white;
+}
+tr:hover{
+    background-color: yellow;
+    transition: 0.5s ease-in-out;
+}
+
