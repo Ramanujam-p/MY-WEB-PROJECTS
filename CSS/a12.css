@@ -1,0 +1,14 @@
+body{
+    background-color: cyan;
+    color:black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+#a{
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 50px;
+    padding:20px;
+}
