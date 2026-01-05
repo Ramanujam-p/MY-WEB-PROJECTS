@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Web Projects | Rama</title>
+
+    <!-- ===== CSS INSIDE STYLE TAG ===== -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            min-height: 100vh;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+        }
+
+        p {
+            opacity: 0.8;
+            margin-bottom: 40px;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px 20px;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(120deg, transparent, rgba(255,255,255,0.25), transparent);
+            transform: translateX(-100%);
+            transition: 0.5s;
+        }
+
+        .card:hover::before {
+            transform: translateX(100%);
+        }
+
+        .card:hover {
+            transform: translateY(-10px) scale(1.03);
+            background: rgba(255, 255, 255, 0.18);
+        }
+
+        .card h2 {
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+        }
+
+        .card span {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        footer {
+            margin-top: 40px;
+            font-size: 0.85rem;
+            opacity: 0.6;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>🚀 My Web Projects</h1>
+    <p>HTML • CSS • JavaScript Projects by Rama</p>
+
+    <div class="projects">
+        <div class="card" onclick="openProject('CALCULATOR')">
+            <h2>🧮 Calculator</h2>
+            <span>Simple & Interactive Calculator</span>
+        </div>
+
+        <div class="card" onclick="openProject('CHRISTMAS 2025 ANIMATION')">
+            <h2>🎄 Christmas 2025 Animation</h2>
+            <span>CSS & JS Animation Project</span>
+        </div>
+
+        <div class="card" onclick="openProject('STUDENT MANAGEMENT SYSTEM')">
+            <h2>🎓 Student Management System</h2>
+            <span>CRUD-based Student Records</span>
+        </div>
+    </div>
+
+    <footer>
+        © 2026 | Developed by Rama
+    </footer>
+</div>
+
+<!-- ===== JS INSIDE SCRIPT TAG ===== -->
+<script>
+    function openProject(folderName) {
+        // Redirects to project folder's index.html
+        window.location.href = `./${folderName}/index.html`;
+    }
+</script>
+
+</body>
+</html>
