@@ -1,0 +1,8 @@
+#box1{
+    width:200px;
+    height:200px;
+    background-color: hsl(188, 100%, 63%);
+    position: relative;
+    top:100px;
+    left:100px;
+}
