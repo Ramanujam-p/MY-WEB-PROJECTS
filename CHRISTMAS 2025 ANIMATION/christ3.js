@@ -1,33 +1,25 @@
-gsap.registerPlugin(
-  MotionPathPlugin,
-  DrawSVGPlugin,
-  MorphSVGPlugin,
-  Physics2DPlugin
-);
-
-MorphSVGPlugin.convertToPath("polygon");
+gsap.registerPlugin(MotionPathPlugin, Physics2DPlugin);
 
 const select = s => document.querySelector(s);
-
 const mainSVG = select(".mainSVG");
 const pContainer = select(".pContainer");
 const sparkle = select(".sparkle");
 
 gsap.set("svg", { visibility: "visible" });
-gsap.set(sparkle, { y: -100, transformOrigin: "50% 50%" });
+gsap.set(sparkle, { y: -100 });
 
-function getSVGPoints(path) {
-  const raw = MotionPathPlugin.getRawPath(path);
-  if (!raw) return [];
-  const pts = [];
+function getSVGPoints(pathSelector) {
+  const raw = MotionPathPlugin.getRawPath(pathSelector);
+  if (!raw || !raw[0]) return [];
+  const points = [];
   for (let i = 0; i < raw[0].length; i += 2) {
-    pts.push({ x: raw[0][i], y: raw[0][i + 1] });
+    points.push({ x: raw[0][i], y: raw[0][i + 1] });
   }
-  return pts;
+  return points;
 }
 
 const treePath = getSVGPoints(".treePath");
-const treeBottomPath = getSVGPoints(".treeBottomPath");
+const bottomPath = getSVGPoints(".treeBottomPath");
 
 const colors = ["#E8F6F8", "#ACE8F8", "#B74551", "#5DBA72"];
 const shapes = ["#star", "#circ", "#cross", "#heart"];
@@ -35,11 +27,11 @@ const particles = [];
 let index = 0;
 
 function createParticles() {
-  for (let i = 0; i < 150; i++) {
+  for (let i = 0; i < 120; i++) {
     const p = select(shapes[i % shapes.length]).cloneNode(true);
     p.setAttribute("fill", colors[i % colors.length]);
     mainSVG.appendChild(p);
-    gsap.set(p, { x: -100, y: -100, scale: 0.5 });
+    gsap.set(p, { x: -100, y: -100, scale: 0.6 });
     particles.push(p);
   }
 }
@@ -52,9 +44,9 @@ function playParticle() {
   });
 
   gsap.to(p, {
-    duration: 3,
+    duration: 2.5,
     physics2D: {
-      velocity: gsap.utils.random(-50, 50),
+      velocity: gsap.utils.random(-40, 40),
       angle: gsap.utils.random(-180, 180),
       gravity: 30
     },
@@ -79,4 +71,4 @@ gsap.timeline({ onUpdate: playParticle })
     ease: "none"
   });
 
-gsap.globalTimeline.timeScale(1.4);
+gsap.globalTimeline.timeScale(1.3);
