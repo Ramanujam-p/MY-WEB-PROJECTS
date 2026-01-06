@@ -1,75 +1,85 @@
-let student = [];
-function addStudentDetails() {
-    let a = document.getElementById("studentname").value;
-    let b = document.getElementById("deptname").value;
-    let c = document.getElementById("rollnoid").value;
-    let d = document.querySelector("input[name='gender']:checked").value;
-    if (!a || !b || !c || !d) {
-        alert("please fill all the details");
-        return;
-    }
-    else {
-        let obj = {
-            name: a, dept: b, rollno: c, gender: d
-        };
-        student.push(obj);
-        alert("student details added successfully");
-        document.getElementById("formid").reset();
-    }
+let student = JSON.parse(localStorage.getItem("students")) || [];
+
+function saveStudent() {
+  let name = studentname.value.trim();
+  let dept = deptname.value.trim();
+  let roll = rollnoid.value.trim();
+  let genderInput = document.querySelector("input[name='gender']:checked");
+  let editIndex = document.getElementById("editIndex").value;
+
+  if (!name || !dept || !roll || !genderInput) {
+    alert("Please fill all details");
+    return;
+  }
+
+  let gender = genderInput.value;
+
+  if (editIndex === "") {
+    student.push({ name, dept, roll, gender });
+  } else {
+    student[editIndex] = { name, dept, roll, gender };
+    document.getElementById("editIndex").value = "";
+  }
+
+  localStorage.setItem("students", JSON.stringify(student));
+  formid.reset();
+  displayStudentDetails();
 }
+
 function displayStudentDetails() {
-    let y = document.getElementById("z");
-    if (student.length === 0) {
-        y.innerHTML = "<p>No student records found</p>";
-        return;
-    }
-    let x = `<table border="1" cellpadding="10">
+  let z = document.getElementById("z");
+  let search = document.getElementById("search").value.toLowerCase();
+
+  let filtered = student.filter(s =>
+    s.name.toLowerCase().includes(search) ||
+    s.roll.toLowerCase().includes(search)
+  );
+
+  count.innerText = filtered.length;
+
+  if (filtered.length === 0) {
+    z.innerHTML = "<p>No students found</p>";
+    return;
+  }
+
+  let html = `<table>
     <tr>
-    <th>Name</th><th>Department</th><th>Gender</th><th>Roll No</th><th>Action</th>
+      <th>Name</th><th>Dept</th><th>Gender</th><th>Roll</th><th>Action</th>
     </tr>`;
-    student.forEach((obj, i) => {
-        x += `<tr>
-        <td>${obj.name}</td>
-        <td>${obj.dept}</td>
-        <td>${obj.gender}</td>
-        <td>${obj.rollno}</td>
-        <td><button onclick="deleteStudentDetails(${i})">Delete</button></td>
-       </tr>
-        `;
-    });
-    x += `</table>`;
-    y.innerHTML = x;
+
+  filtered.forEach((s, i) => {
+    html += `
+      <tr>
+        <td>${s.name}</td>
+        <td>${s.dept}</td>
+        <td>${s.gender}</td>
+        <td>${s.roll}</td>
+        <td>
+          <button class="action-btn edit" onclick="editStudent(${i})">Edit</button>
+          <button class="action-btn delete" onclick="deleteStudent(${i})">Delete</button>
+        </td>
+      </tr>`;
+  });
+
+  html += "</table>";
+  z.innerHTML = html;
 }
-function deleteStudentDetails(i) {
+
+function deleteStudent(i) {
+  if (confirm("Delete this student?")) {
     student.splice(i, 1);
+    localStorage.setItem("students", JSON.stringify(student));
     displayStudentDetails();
+  }
 }
-function updateStudentDetails() {
-    let r = document.getElementById("rollnoid").value;
-    let n = document.getElementById("studentname").value;
-    let d = document.getElementById("deptname").value;
-    let g = document.querySelector("input[name='gender']:checked");
-    if (!g) {
-        alert("select gender");
-        return;
-    }
-    let gender = g.value;
-    let flag = false;
-    for (let i = 0; i < student.length; i++) {
-        if (student[i].rollno == r) {
-            student[i].name = n;
-            student[i].dept = d;
-            student[i].gender = gender;
-            flag = true;
-            break;
-        }
-    }
-    if (flag) {
-        alert("student details updated");
-        displayStudentDetails();
-        document.getElementById("formid").reset();
-    }
-    else {
-        alert("student with this roll number not found");
-    }
+
+function editStudent(i) {
+  let s = student[i];
+  studentname.value = s.name;
+  deptname.value = s.dept;
+  rollnoid.value = s.roll;
+  document.querySelector(`input[value="${s.gender}"]`).checked = true;
+  editIndex.value = i;
 }
+
+displayStudentDetails();

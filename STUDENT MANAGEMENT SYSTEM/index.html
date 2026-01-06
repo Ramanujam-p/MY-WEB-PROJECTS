@@ -3,64 +3,76 @@
 
 <head>
     <meta charset="UTF-8">
+    <title>Student Management System</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
 </head>
 
 <body>
-    <h1>STUDENT MANAGEMENT SYSTEM</h1>
-    <form id="formid">
-        <table>
-            <tr>
-                <td>
-                    <label for="studentname">Name:</label>
-                </td>
-                <td>
-                    <input type="text" id="studentname" placeholder="enter your name">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label for="deptname">Department:</label>
-                </td>
-                <td>
-                    <input type="text" id="deptname" placeholder="enter your department">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label for="rollnoid">Roll No:</label>
-                </td>
-                <td>
-                    <input type="text" id="rollnoid" placeholder="enter your roll no">
-                </td>
-            </tr>
-            <tr>
-                <td><label>Gender:</label></td>
-                <td>
-                    <input type="radio" id="one" name="gender" value="Male">
-                    <label for="one">Male</label>
-                    <input type="radio" id="two" name="gender" value="Female">
-                    <label for="two">Female</label>
-                    <input type="radio" id="three" name="gender" value="Other">
-                    <label for="three">Other</label>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <button type="button" onclick="addStudentDetails()">Add Student Details</button>
-                </td>
-                <td>
-                    <button type="button" onclick="displayStudentDetails()">Display</button>
-                    <button type="button" onclick="updateStudentDetails()">Update</button>
-                </td>
-            </tr>
+    <div class="container">
 
-        </table>
-    </form>
-    <div id="z"></div>
+        <h1>🎓 Student Management System</h1>
+        <div class="card">
+            <form id="formid">
+                <input type="hidden" id="editIndex">
+
+                <div class="field">
+                    <label>Name</label>
+                    <input type="text" id="studentname" placeholder="Enter student name">
+                </div>
+
+                <div class="field">
+                    <label>Department</label>
+                    <input type="text" id="deptname" placeholder="Enter department">
+                </div>
+
+                <div class="field">
+                    <label>Roll No</label>
+                    <input type="text" id="rollnoid" placeholder="Enter roll number">
+                </div>
+
+                <div class="field">
+                    <label>Gender</label>
+
+                    <div class="gender-box">
+                        <input type="radio" name="gender" id="male" value="Male">
+                        <label for="male" class="gender-card">
+                            <span>👨</span>
+                            Male
+                        </label>
+
+                        <input type="radio" name="gender" id="female" value="Female">
+                        <label for="female" class="gender-card">
+                            <span>👩</span>
+                            Female
+                        </label>
+
+                        <input type="radio" name="gender" id="other" value="Other">
+                        <label for="other" class="gender-card">
+                            <span>⚧</span>
+                            Other
+                        </label>
+                    </div>
+                </div>
+
+
+                <button type="button" class="glow-btn" onclick="saveStudent()">
+                    Save Student
+                </button>
+            </form>
+        </div>
+        <div class="card">
+            <div class="top-bar">
+                <input type="text" id="search" placeholder="🔍 Search by name or roll"
+                    onkeyup="displayStudentDetails()">
+                <div class="count">Total: <span id="count">0</span></div>
+            </div>
+
+            <div id="z" class="table-wrapper"></div>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
 </body>
 
 </html>
