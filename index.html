@@ -135,11 +135,11 @@
 
 <script>
 function openProject(path) {
-    if (path.startsWith("http")) {
+    if (path.startsWith("http://") || path.startsWith("https://")) {
         window.open(path, "_blank");
-    } else {
-        window.location.href = encodeURI(`./${path}/index.html`);
+        return;
     }
+    window.location.href = encodeURI(path + "/index.html");
 }
 </script>
 
