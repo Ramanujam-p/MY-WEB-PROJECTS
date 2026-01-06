@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>My Web Projects | Rama</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <style>
         * {
             margin: 0;
@@ -56,7 +58,12 @@
             content: "";
             position: absolute;
             inset: 0;
-            background: linear-gradient(120deg, transparent, rgba(255,255,255,0.25), transparent);
+            background: linear-gradient(
+                120deg,
+                transparent,
+                rgba(255,255,255,0.25),
+                transparent
+            );
             transform: translateX(-100%);
             transition: 0.5s;
         }
@@ -99,13 +106,16 @@
             <h2>🧮 Calculator</h2>
             <span>Simple & Interactive Calculator</span>
         </div>
+
         <div class="card" onclick="openProject('STUDENT MANAGEMENT SYSTEM')">
             <h2>🎓 Student Management System</h2>
             <span>CRUD-based Student Records</span>
         </div>
-        <div class="card" onclick="openProject('CSS/FlexBox/IMAGE GALLERY')">
+     
+        <div class="card" onclick="openProject('CSS/FlexBox/Image Gallery')">
             <h2>🌄 Image Gallery</h2>
             <span>Responsive Modern Image Gallery</span>
+        </div>
     </div>
 
     <footer>
@@ -114,9 +124,8 @@
 </div>
 
 <script>
-    function openProject(folderName) {
-        // Redirects to project folder's index.html
-        window.location.href = `./${folderName}/index.html`;
+    function openProject(folderPath) {
+        window.location.href = encodeURI(`./${folderPath}/index.html`);
     }
 </script>
 
