@@ -118,8 +118,8 @@
         </div>
 
         <div class="card" onclick="openProject('https://ramanujam-p.github.io/RESPONSIVE-LANDINING-PAGE/')">
-            <h2>🚀Landing Page</h2>
-            <span>Creative Landing Page</span>
+        <h2>🚀 Landing Page</h2>
+        <span>Creative Landing Page</span>
         </div>
 
         <div class="card" onclick="openProject('CSS/Food website')">
@@ -134,10 +134,15 @@
 </div>
 
 <script>
-    function openProject(folderPath) {
-        window.location.href = encodeURI(`./${folderPath}/index.html`);
+function openProject(path) {
+    if (path.startsWith("http")) {
+        window.open(path, "_blank");
+    } else {
+        window.location.href = encodeURI(`./${path}/index.html`);
     }
+}
 </script>
+
 
 </body>
 </html>
