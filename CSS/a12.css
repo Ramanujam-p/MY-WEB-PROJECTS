@@ -1,14 +1,121 @@
-body{
-    background-color: cyan;
-    color:black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+h1{
+
+
+    text-align: center;
+
+
+    color:red;
+
+
 }
-#a{
-    font-size: 25px;
-    font-weight: bold;
-    border-radius: 50px;
-    padding:20px;
+
+
+h1:hover{
+
+
+    cursor:pointer;
+
+
+    color:black;
+
+
+}
+
+
+body{
+
+
+    background-color: aqua;
+
+
+    font-family: Arial, Helvetica, sans-serif;
+
+
+}
+
+
+#one{
+
+
+    border-width: 2px;
+
+
+    border-color: black;
+
+
+    border-style: solid;
+
+
+    border-radius: 8cm;
+
+
+    width: 100px;
+
+
+    padding: 5px;
+
+
+    background-color: greenyellow;
+
+
+}
+
+
+#one:hover{
+
+
+    cursor: pointer;
+
+
+    color:red;
+
+
+}
+
+
+#output{
+
+
+    margin-top: 20px;
+
+
+}
+
+
+table{
+
+
+    width: 500px;
+
+
+    height:200px;
+
+
+    border-color:black;
+
+
+    border-style: solid;
+
+
+    border-width: 2px;
+
+
+}
+
+
+th,td{
+
+
+    padding: 10px;
+
+
+}
+
+
+th{
+
+
+    color:blue;
+
+
 }
