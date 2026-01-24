@@ -81,7 +81,7 @@ This project is created to:
 **Ramanujam P**  
 2nd Year CSE Student | Full Stack Developer  
 
-📌 Portfolio: https://rama-p-portfolio.netlify.app/  
+📌 Portfolio: https://ramanujam-portfolio.vercel.app/
 📌 Skill Share: https://ramanujam-skill-share-platform.netlify.app/
 
 ---
