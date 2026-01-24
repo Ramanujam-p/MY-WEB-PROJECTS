@@ -82,7 +82,7 @@ This project is created to:
 2nd Year CSE Student | Full Stack Developer  
 
 📌 Portfolio: https://ramanujam-portfolio.vercel.app/
-📌 Skill Share: https://ramanujam-skill-share-platform.netlify.app/
+📌 Skill Share: https://student-helpdesk-f4987.web.app/
 
 ---
 
