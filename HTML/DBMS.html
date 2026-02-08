@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Oracle SQL Plus Output</title>
+<style>
+body {
+    background-color: black;
+    color: rgba(255, 255, 255, 0.605);
+    font-family: Consolas, monospace;
+    padding: 20px;
+}
+.terminal {
+    max-width: 1200px;
+    margin: auto;
+}
+pre {
+    white-space: pre;
+    line-height: 1.4;
+}
+</style>
+</head>
+
+<body>
+<div class="terminal">
+
+<pre>
+SQL*Plus: Release 19.0.0.0.0 - Production
+Version 19.3.0.0.0
+
+Connected to:
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0 - Production
+
+
+SQL> DELETE FROM WORKS_ON3525 WHERE Hours < 10;
+
+2 rows deleted.
+
+SQL> SELECT MIN(Hours) AS Min_Hours, COUNT(*) AS Total_Assignments FROM WORKS_ON3525;
+
+MIN_HOURS  TOTAL_ASSIGNMENTS
+---------  -----------------
+10.0                 14
+
+
+SQL> DELETE FROM WORKS_ON3525 WHERE Essn = '453453453';
+
+2 rows deleted.
+
+SQL> SELECT COUNT(*) AS Joyce_Assignments FROM WORKS_ON3525 WHERE Essn = '453453453';
+
+JOYCE_ASSIGNMENTS
+----------------
+0
+
+
+SQL> DELETE FROM DEPEND3525
+  2  WHERE Relationship = 'Spouse'
+  3  AND Bdate < DATE '1950-01-01';
+
+2 rows deleted.
+
+SQL> SELECT Essn, Dependent_name, Bdate, Relationship
+  2  FROM DEPEND3525
+  3  WHERE Relationship = 'Spouse'
+  4  AND Bdate < DATE '1950-01-01';
+
+no rows selected
+
+
+SQL> DELETE FROM PROJ3525 WHERE Pnumber = 20;
+
+1 row deleted.
+
+SQL> SELECT COUNT(*) AS Project_Exists FROM PROJ3525 WHERE Pnumber = 20;
+
+PROJECT_EXISTS
+--------------
+0
+
+
+SQL> DELETE FROM EMPLOYEE3525
+  2  WHERE Super_ssn IS NULL
+  3  AND Salary < 50000;
+
+0 rows deleted.
+
+SQL> SELECT Fname, Lname, Super_ssn, Salary
+  2  FROM EMPLOYEE3525
+  3  WHERE Super_ssn IS NULL
+  4  AND Salary < 50000;
+
+no rows selected
+
+
+
+SQL> SELECT Fname, Lname, Address
+  2  FROM EMPLOYEE3525
+  3  WHERE Address LIKE '%Houston%';
+
+FNAME     LNAME     ADDRESS
+--------  --------  -------------------------
+James     Borg      450 Stone, Houston TX
+Joyce     English   5631 Rice, Houston TX
+Ahmad     Jabbar    980 Dallas, Houston TX
+John      Smith    731 Fondren, Houston TX
+Franklin  Wong     638 Voss, Houston TX
+
+
+SQL> SELECT Fname, Lname, Salary
+  2  FROM EMPLOYEE3525
+  3  WHERE Salary BETWEEN 25000 AND 35000;
+
+FNAME   LNAME     SALARY
+------  --------  ------
+Joyce   English   28000
+Alicia  Zelaya    28500
+John    Smith     33600
+
+
+SQL> SELECT Fname, Lname, Sex, Dno
+  2  FROM EMPLOYEE3525
+  3  WHERE Sex = 'F'
+  4    AND Dno = 5;
+
+FNAME   LNAME     S   DNO
+------  --------  -   ---
+Joyce   English   F    5
+Priya   Sharma    F    5
+
+
+SQL> SELECT Fname, Lname, Super_ssn
+  2  FROM EMPLOYEE3525
+  3  WHERE Super_ssn IS NULL;
+
+FNAME   LNAME   SUPER_SSN
+------  ------  ---------
+James   Borg
+
+
+SQL> SELECT Pname, Plocation
+  2  FROM PROJ3525
+  3  WHERE Plocation IN ('Houston','Stafford');
+
+PNAME             PLOCATION
+----------------  ----------
+AI Initiative     Houston
+ProductZ          Houston
+Computerization   Stafford
+Newbenefits       Stafford
+
+
+SQL> SELECT Fname, Lname, Salary
+  2  FROM EMPLOYEE3525
+  3  WHERE Fname LIKE 'J%'
+  4    AND Salary > 30000;
+
+FNAME     LNAME     SALARY
+--------  --------  ------
+James     Borg      55000
+Jennifer  Wallace   43000
+John      Smith     33600
+
+
+SQL> SELECT Pname, Pnumber, Dnum
+  2  FROM PROJ3525
+  3  WHERE Dnum <> 5;
+
+PNAME             PNUMBER   DNUM
+---------------- --------  ----
+Computerization     10       4
+Newbenefits         30       4
+
+
+SQL> SELECT Fname, Lname, Minit, Salary
+  2  FROM EMPLOYEE3525
+  3  WHERE Minit IS NOT NULL
+  4    AND Salary > 30000;
+
+FNAME     LNAME     M   SALARY
+--------  --------  -   ------
+James     Borg      E   55000
+Jennifer  Wallace   S   43000
+Franklin  Wong      T   44800
+Ramesh    Narayan   K   42560
+John      Smith     B   33600
+
+6 rows selected.
+
+SQL>
+</pre>
+
+</div>
+</body>
+</html>

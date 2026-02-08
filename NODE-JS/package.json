@@ -1,0 +1,12 @@
+{
+  "name": "node-js",
+  "version": "1.0.0",
+  "description": "Code By Rama",
+  "license": "ISC",
+  "author": "Rama",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "test": "hello"
+  }
+}
