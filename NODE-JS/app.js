@@ -1,6 +1,10 @@
-const amount = 9
-
-if (amount < 10)
-    console.log('Small number')
-else console.log('Large number')
-console.log(`Hey it's my first node app!!!`)
+const http = require('http');
+const server = http.createServer((req, res) =>
+{
+    res.writeHead(200, { 'Content-type': 'text/html' });
+    res.write('<h1>Hello world</h1>');
+    res.end();
+})
+server.listen(3000, () => {
+    console.log(`server is running on http://localhost:3000`);
+})
