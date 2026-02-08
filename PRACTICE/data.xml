@@ -1,0 +1,12 @@
+<library>
+    <book>
+        <id>101</id>
+        <title>JavaScript</title>
+        <author>John</author>
+    </book>
+    <book>
+        <id>102</id>
+        <title>Node.js</title>
+        <author>Alex</author>
+    </book>
+</library>
