@@ -1,0 +1,46 @@
+body{
+     background-color: black;
+     height:100vh;
+     display:flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+}
+h3{
+    color:red;
+    display:flex;
+    text-align: center;
+    justify-content: center;
+}
+h3:hover{
+    color:cyan;
+}
+#counter{
+   display:flex;
+   justify-content: center;
+   align-items: baseline;
+    font-size: 20px;
+    padding:10px;
+    border-radius:20px;
+    background-color: white;
+}
+#number{
+    color:white;
+    font-size: 50px;
+    display:flex;
+    justify-content: center;    
+    align-items: center;
+    background-color: red;
+    width: 90px;
+    border-radius:20px;
+}
+#clr{
+    display:flex;
+    justify-content: center;
+    align-items: baseline;
+    font-size: 20px;
+    padding:10px;
+    border-radius:20px;
+    background-color: white;
+    margin-top: 20px;
+}
