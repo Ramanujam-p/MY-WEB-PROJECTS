@@ -1,13 +1,12 @@
 function loadxml()
 {
-    alert("Book details loaded successfully");
     let a = new XMLHttpRequest();
     a.onreadystatechange=()=>{
         if(a.readyState===4 && a.status===200)
         {
             let b = a.responseXML;
             let c = b.getElementsByTagName("book");
-            let output=`<table border="1" cell-padding="10">
+            let output=`<table border="1" cellpadding="10">
             <tr>
                 <th>ID</th>
                 <th>TITLE</th>
@@ -38,7 +37,11 @@ function loadxml()
                 `;
             }
             output+=`</table>`;
-            document.getElementById("output").innerHTML=output;            
+            document.getElementById("output").innerHTML = output;   
+            alert("Book details loaded successfully");
+        }
+        else {
+            alert("Error in loading book details");
         }
     }
     a.open("GET","lms.xml",true);
