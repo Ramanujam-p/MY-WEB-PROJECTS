@@ -1,7 +1,7 @@
 const http = require('http');
 const fs = require('fs')
 const xml2js = require('xml2js')
-const parser = new xml2js.Parser();
+const parser = new xml2js.Parser({explicitArray: false});
 const a=http.createServer((req, res) => {
     if (req.url === '/')
     {
@@ -14,7 +14,7 @@ const a=http.createServer((req, res) => {
             parser.parseString(data, (error, result) => {
                 if (error)
                 {
-                    res.writeHead(500, { 'content-type': 'plain/text' })
+                    res.writeHead(500, { 'content-type': 'text/plain' })
                     res.end("error in parsing the data")
                 }
                 const parse = JSON.stringify(result, null, 2);
@@ -22,7 +22,6 @@ const a=http.createServer((req, res) => {
                 res.end(parse);
             })
         })
-
     }
     else {
         res.writeHead(400, { 'content-type': 'text/plain' })

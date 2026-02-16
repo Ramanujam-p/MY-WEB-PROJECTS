@@ -1,0 +1,50 @@
+body{
+    background-color: cyan;
+    color:red;
+    margin:0;
+
+}
+.a{
+    display:flex;
+    justify-content:center;
+}
+.a:hover{
+    color:blue;
+    cursor:pointer;
+}
+.a:active{
+    color:green;
+}
+.one{
+    margin-top:20px;
+    border-color:black;
+    border-radius: 40px;
+    width:150px;
+    text-align: center;
+    padding:20px;
+}
+.one:hover{
+    background:linear-gradient(90deg,cyan,blue);
+    color:white;
+    cursor:pointer;
+}
+.one:active{
+    background:linear-gradient(90deg,black,gray);
+    color:white;
+}
+.z{
+    display:flex;
+    justify-content:center;
+
+}
+table{
+    border-color:black;
+     border-collapse:collapse;
+     text-align: center;
+     margin: 0 auto;
+     margin-top: 10px;
+}
+th,td{
+    padding:5px;
+    color:white;
+}

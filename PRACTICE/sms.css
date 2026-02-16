@@ -1,0 +1,83 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: cyan;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+#formId {
+    background-color: white;
+    margin-top: 40px;
+    border-radius: 10px;
+    padding: 20px;
+    width: 35%;
+    box-shadow: 0 0 10px black;
+}
+
+h2 {
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    margin-top: 5px;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+#gender-group {
+    display: flex;
+    gap: 15px;
+    margin-top: 5px;
+}
+
+#button-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+button {
+    background-color: black;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: green;
+}
+button:active{
+    background-color: red;
+    color:blue;
+}
+
+table {
+    margin-top: 20px;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th, td {
+    padding: 8px;
+    text-align: center;
+}
+
+#output {
+    margin-top: 20px;
+}

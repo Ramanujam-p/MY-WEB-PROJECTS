@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library>
+    <book>
+        <title>Java</title>
+        <id>1</id>
+        <author>Rama</author>
+        <status>Yes</status>
+    </book>
+     <book>
+        <title>C</title>
+        <id>2</id>
+        <author>Harish</author>
+        <status>No</status>
+    </book>
+</library>
