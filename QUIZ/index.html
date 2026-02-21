@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interactive Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="quiz-container">
+    <h2>Interactive Quiz</h2>
+    <div id="timer">Time Left: 20 seconds</div>
+    <div id="warning" class="warning">⚠ Hurry up! Only 5 seconds left!</div>
+    <form id="quizForm">
+        <div class="question">
+            <p>1. Which language is used for web styling?</p>
+            <input type="radio" name="q1" value="CSS"> CSS<br>
+            <input type="radio" name="q1" value="HTML"> HTML<br>
+            <input type="radio" name="q1" value="Java"> Java<br>
+        </div>
+        <div class="question">
+            <p>2. Select JavaScript frameworks:</p>
+            <input type="checkbox" name="q2" value="React"> React<br>
+            <input type="checkbox" name="q2" value="Angular"> Angular<br>
+            <input type="checkbox" name="q2" value="Django"> Django<br>
+        </div>
+        <div class="question">
+            <p>3. HTML stands for:</p>
+            <select name="q3">
+                <option value="">--Select--</option>
+                <option value="Hyper Text Markup Language">Hyper Text Markup Language</option>
+                <option value="High Tech Modern Language">High Tech Modern Language</option>
+            </select>
+        </div>
+        <div class="question">
+            <p>4. Who developed Java?</p>
+            <input type="text" name="q4">
+        </div>
+        <div class="question">
+            <p>5. Write one use of JavaScript:</p>
+            <textarea name="q5"></textarea>
+        </div>
+        <button type="button" onclick="submitQuiz()">Submit</button>
+    </form>
+    <div id="result"></div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
